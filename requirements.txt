@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+httpx
+pyjwt[crypto]
+pytest
+prometheus-fastapi-instrumentator
