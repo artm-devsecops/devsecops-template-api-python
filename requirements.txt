@@ -3,4 +3,5 @@ uvicorn[standard]
 httpx
 pyjwt[crypto]
 pytest
+pytest-cov
 prometheus-fastapi-instrumentator
