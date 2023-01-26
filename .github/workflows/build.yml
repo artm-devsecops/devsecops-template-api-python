@@ -52,7 +52,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Pytest coverage comment
-      uses: MishaKav/pytest-coverage-comment@v1
+      uses: MishaKav/pytest-coverage-comment@v1.1.43
       with:
         pytest-coverage-path: cov/coverage.xml
         junitxml-path: junit/test-results.xml
