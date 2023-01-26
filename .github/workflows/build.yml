@@ -10,7 +10,11 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  checks: write # Required for CodeCoverageSummary
+  pull-requests: write # Required for CodeCoverageSummary
+  packages: write # Required for Docker
+  contents: read # Required for CodeCoverageSummary 
+  security-events: write # Required for Trivy
 
 jobs:
   build:
@@ -52,6 +56,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Pytest coverage comment
+      if: github.event_name == 'pull_request'
       uses: MishaKav/pytest-coverage-comment@v1.1.43
       with:
         pytest-coverage-path: cov/coverage.xml
