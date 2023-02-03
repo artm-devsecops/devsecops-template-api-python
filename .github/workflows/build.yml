@@ -19,7 +19,7 @@ jobs:
       contents: read # Required for CodeCoverageSummary
     uses: artm-devsecops/artm-workflow-templates/.github/workflows/artm-devsecops-build-python.yml@main
     with:
-      python_version: 3.10
+      python_version: "3.10"
 
   build-image-workflow:
     name: "Build image"
